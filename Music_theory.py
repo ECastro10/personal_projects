@@ -26,40 +26,47 @@ sharp_keys = ("G", "D", "A", "E", "B", "F#")
 #Keys in flat flow
 flat_keys = ("F", "Bb", "Eb", "Ab", "Db", "Gb", "C")
 
-key = input("Please enter what key you want to be in.\n\
-Here are the available keys: (A, Bb, B, C, Db, D, Eb, E, F, F#/Gb, G, Ab) > ")
 
-if key in sharp_keys:
-    empty_note_list = Notes_sharp
-elif key in flat_keys:
-    empty_note_list = Notes_flat
-#index counter used to determine index of key
-index = 0
-#this loop will attempt to use an index counter to identify the index of the key in Notes sharp or flat
-for k in empty_note_list:
-    if k == key:
-        break
-    else:
-        index += 1
-#this list modifies the empty note list = to some note list
-mod_empty_note_list = (empty_note_list[((index)):] + empty_note_list[:((index)+1)])
-
-#major_scale formula
-major_scale = mod_empty_note_list[0:3:2] + mod_empty_note_list[4:6:2] +\
-mod_empty_note_list[5:12:2] + mod_empty_note_list[12:14]
-
-#minor_scale formula
-minor_scale = mod_empty_note_list[0:3:2] + mod_empty_note_list[3:8:2] +\
- mod_empty_note_list[8:13:2]
-
-user_input1 = input("What do you want to see? scales, chords, or games > ")
+user_input1 = input("What do you want to see? scales, chords, or games > ".lower())
+'''
+while user_input1 != "scales" or "chords" or "games":
+    print("please check your spelling")
+    user_input1 = input("What do you want to see? scales, chords, or games > ".lower())
+'''
 
 #scales branch of menu
 if user_input1 == "scales":
+    key = input("Please enter what key you want to be in.\n\
+ Here are the available keys: (A, Bb, B, C, Db, D, Eb, E, F, F#/Gb, G, Ab) > ")
+
+    if key in sharp_keys:
+        empty_note_list = Notes_sharp
+    elif key in flat_keys:
+        empty_note_list = Notes_flat
+    #index counter used to determine index of key
+    index = 0
+    #this loop will attempt to use an index counter to identify the index of the key in Notes sharp or flat
+    for k in empty_note_list:
+        if k == key:
+            break
+        else:
+            index += 1
+    #this list modifies the empty note list = to some note list
+    mod_empty_note_list = (empty_note_list[((index)):] + empty_note_list[:((index)+1)])
+
     scale_type = input("Would you like to see major or minor scales? > ")
     if scale_type == "major":
+        #major_scale formula
+        major_scale = mod_empty_note_list[0:3:2] + mod_empty_note_list[4:6:2] +\
+        mod_empty_note_list[5:12:2] + mod_empty_note_list[12:14]
+
         print(major_scale)
     elif scale_type == "minor":
+
+        #minor_scale formula
+        minor_scale = mod_empty_note_list[0:3:2] + mod_empty_note_list[3:8:2] +\
+         mod_empty_note_list[8:13:2]
+
         print(minor_scale)
 
 #chords branch of menu
