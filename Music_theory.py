@@ -4,11 +4,16 @@ empty_note_list = ()
 
 #triads library
 triads = {"Cmaj":"CEG", "Cmin":"CEbG", "Cdim":"CEbGb", "Caug":"CEG#",
+ "Dbmaj":"DbFAb", "Dbmin":"DbFbAb", "Dbdim":"DbFbAbb", "Dbaug":"DbFA",
  "Dmaj":"DF#A", "Dmin":"DFA", "Ddim":"DFAb", "Daug":"DF#A#",
+ "Ebmaj":"EbGBb", "Ebmin":"EbGbBb", "Ebdim":"EbGBbb", "Ebaug":"EbGB",
  "Emaj":"EG#B", "Emin":"EGB", "Edim":"EGBb", "Eaug":"EG#B#",
  "Fmaj":"FAC", "Fmin":"FAbC", "Fdim":"FAbCb", "Faug":"FAC#",
+ "Gbmaj":"GbBbDb", "Gbmin":"GbBbbDb", "Gbdim":"GbBbbDbb", "Gbaug":"GbBbD",
  "Gmaj":"GBD", "Gmin":"GBbD", "Gdim":"GBbDb", "Gaug":"GBD#",
+ "Abmaj":"AbCEb", "Abmin":"AbCbEb", "Abdim":"AbCbEbb", "Abaug":"AbCE",
  "Amaj":"AC#E", "Amin":"ACE", "Adim":"ACEb", "Aaug":"AC#E#",
+ "Bbmaj":"BbDF", "Bbmin":"BbDbF", "Bbdim":"BbDbFb", "Bbaug":"BbDF#",
  "Bmaj":"BD#F#", "Bmin":"BDF#", "Bdim":"BDF", "Baug":"BD#F##"}
 #Notes in Music Scale
 Notes_flat = ("A", "Bb", "B", "C", "Db", "D", "Eb", "E", "F", "Gb", "G", "Ab")
@@ -85,6 +90,8 @@ elif user_input1 == "games":
             print(rand_chord_name)
             user_guess1 = input("What are the notes in the chords\n\
 Remember to use all caps except for the flat symbol> ")
+            print("BIG HINT: every chord's spelling is relative to its major\
+ form so use double flats (bb) or double sharps (##).")
             tries -= 1
 
             while user_guess1 != rand_chord_spell:
