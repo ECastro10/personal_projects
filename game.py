@@ -7,7 +7,7 @@ players = {}
 enemy_list = []
 #enemy dictionary
 enemies = {}
-'''
+
 #this for loop allows the naming of characters and random stat selection
 for i in range(0,2):
     name = input("Ally name > ")
@@ -33,7 +33,6 @@ for i in range(0,2):
     enemies[name] = enemy_stat_dictionary
     enemy_list.insert(i,name)
 print(enemies)
-'''
 '''
 Work in progress, trying to create classes with preselected moves.
 '''
@@ -85,3 +84,33 @@ for i in range(0,2):
     enemies[name] = enemy_stat_dictionary
     enemy_list.insert(i,name)
 print(enemies)
+
+
+'''
+so the above portionis one way to get stats
+
+the code below focuses on classes,
+I need to work on combining both ideas
+
+'''
+
+class Ally:
+    def __init__(self, name, hp, atk, dfn, spd, lck):
+        self.name = name
+        self.hp = hp
+        self.atk = atk
+        self.dfn = dfn
+        self.spd = spd
+        self.lck = lck
+
+    def show_stats(self):
+        print ('{}\n\
+Health:{}\n\
+Attack:{}\n\
+Defense:{}\n\
+Speed:{}\n\
+Luck:{}'.format(self.name, self.hp, self.atk, self.dfn, self.spd, self.lck))
+
+Ally_1 = Ally('Santa', 9, 7, 9, 6, 3)
+
+Ally_1.show_stats()
