@@ -9,4 +9,4 @@ to type in the notes. It's counterpart guess the quiz will also be included.
 I hope to implement a difficulty level at some point.
 
 The game.py program is going to be a turn based battle game in which you can name your characters and battle it out with computer
-generated characters. If I can get that far I will probably implement some other features but first the basics.
+generated characters. Right now I am able to create dictionaries with the key:name and stats:values. I also have been working on the classes and methods. I am trying to combine both pieces of code to utilize the classes Allies and Enemies but to include the dictionaries of names and values. Shouldn't be too difficult.
