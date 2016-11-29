@@ -87,7 +87,7 @@ print(enemies)
 
 
 '''
-so the above portionis one way to get stats
+so the above portion is one way to get stats
 
 the code below focuses on classes,
 I need to work on combining both ideas
