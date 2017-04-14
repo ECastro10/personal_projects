@@ -5,8 +5,8 @@ Bucket must be created, refer back to boto3_and_sqs_first_attempt file
 
 import boto3
 
-BUCKET = "mfg54fft"
-KEY = "royal_pink_typewriter.jpg"
+BUCKET = "bucket_name"
+KEY = "image_name"
 
 
 def detect_labels(bucket, key, max_labels=10, min_confidence=50, region="us-west-2"):
