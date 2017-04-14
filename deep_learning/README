@@ -1,0 +1,8 @@
+Any file that starts with "words", is related to the good or bad neural network.
+You need to use or allocate the txt files in our_data as well as run those two files through the process our data python script.
+
+
+The other files with lesson or in the saving_network_steps are about image recognition neural networks using the tensorflow methods.
+
+The test_connection directory contains the beginning of web scraping data and building the foundation for a combination of neural networks
+to be used to determine whether stocks will drop or rise using the trader workstation application.
